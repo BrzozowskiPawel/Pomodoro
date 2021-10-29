@@ -14,6 +14,7 @@
 		04129F3D272C4F52006A65BF /* Pomodoro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04129F3B272C4F52006A65BF /* Pomodoro.xcdatamodeld */; };
 		04129F3F272C4F53006A65BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04129F3E272C4F53006A65BF /* Assets.xcassets */; };
 		04129F42272C4F53006A65BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04129F40272C4F53006A65BF /* LaunchScreen.storyboard */; };
+		04129F4A272C5A40006A65BF /* backgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04129F49272C5A40006A65BF /* backgroundVideo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04129F3E272C4F53006A65BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04129F41272C4F53006A65BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04129F43272C4F53006A65BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04129F49272C5A40006A65BF /* backgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundVideo.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				04129F38272C4F52006A65BF /* Main.storyboard */,
 				04129F3E272C4F53006A65BF /* Assets.xcassets */,
 				04129F40272C4F53006A65BF /* LaunchScreen.storyboard */,
+				04129F49272C5A40006A65BF /* backgroundVideo.mp4 */,
 				04129F43272C4F53006A65BF /* Info.plist */,
 				04129F3B272C4F52006A65BF /* Pomodoro.xcdatamodeld */,
 			);
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04129F42272C4F53006A65BF /* LaunchScreen.storyboard in Resources */,
+				04129F4A272C5A40006A65BF /* backgroundVideo.mp4 in Resources */,
 				04129F3F272C4F53006A65BF /* Assets.xcassets in Resources */,
 				04129F3A272C4F52006A65BF /* Main.storyboard in Resources */,
 			);
