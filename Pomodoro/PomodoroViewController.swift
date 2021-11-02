@@ -98,41 +98,42 @@ class PomodoroViewController: UIViewController {
     
     @objc func stopMusic() {
         playerMusic.stop()
+        toggleMainLabel()
     }
     
     func playSound(soundName: String) {
         let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
         playerMusic = try! AVAudioPlayer(contentsOf: url!)
         playerMusic.play()
+        toggleMainLabel()
                 
     }
     
     func getTimeLeft() -> String {
         let timeInterval = TimeInterval(pomodoroTimes[pomodoroType]! - secondsPassed)
         let myNSDate = Date(timeIntervalSince1970: timeInterval)
-        
         dateFormatter.dateFormat = "mm:ss"
         return dateFormatter.string(from: myNSDate)
     }
     
     @IBAction func settingPressed(_ sender: Any) {
         
-        let alert = UIAlertController(title: "\(pomodoroType) 🍅", message: "", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "Change time", style: .default) { action in
-            
-        }
-        
-        alert.addTextField { (alerTextField) in
-            alerTextField.placeholder = "New duration [seconds]"
-//            print(alerTextField.text!)
+        let alert = UIAlertController(title: "\(pomodoroType) 🍅", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
-        }
-        
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-        
-        timeLabel.text = getTimeLeft()
+        alert.addTextField(configurationHandler: { textField in
+            textField.placeholder = "You can type own Pomodor time"
+        })
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+
+            if let newTime = alert.textFields?.first?.text {
+                print("Time: \(newTime)")
+                self.pomodoroTimes[self.pomodoroType]! = Int(newTime)!
+                self.timeLabel.text = self.getTimeLeft()
+            }
+        }))
+        self.present(alert, animated: true)
     }
     
     func toggleMainLabel() {
