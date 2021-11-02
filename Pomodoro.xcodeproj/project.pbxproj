@@ -15,6 +15,7 @@
 		04129F42272C4F53006A65BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04129F40272C4F53006A65BF /* LaunchScreen.storyboard */; };
 		04129F4A272C5A40006A65BF /* backgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04129F49272C5A40006A65BF /* backgroundVideo.mp4 */; };
 		04D191802731513500BDCB38 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1917F2731513500BDCB38 /* PomodoroViewController.swift */; };
+		04D191822731629D00BDCB38 /* sound_alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04D191812731629D00BDCB38 /* sound_alarm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		04129F43272C4F53006A65BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04129F49272C5A40006A65BF /* backgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundVideo.mp4; sourceTree = "<group>"; };
 		04D1917F2731513500BDCB38 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
+		04D191812731629D00BDCB38 /* sound_alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				04129F40272C4F53006A65BF /* LaunchScreen.storyboard */,
 				04129F49272C5A40006A65BF /* backgroundVideo.mp4 */,
 				04129F43272C4F53006A65BF /* Info.plist */,
+				04D191812731629D00BDCB38 /* sound_alarm.mp3 */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 				04129F4A272C5A40006A65BF /* backgroundVideo.mp4 in Resources */,
 				04129F3F272C4F53006A65BF /* Assets.xcassets in Resources */,
 				04129F3A272C4F52006A65BF /* Main.storyboard in Resources */,
+				04D191822731629D00BDCB38 /* sound_alarm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

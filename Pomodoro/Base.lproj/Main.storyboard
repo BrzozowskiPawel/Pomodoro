@@ -80,14 +80,55 @@
                     <view key="view" contentMode="scaleToFill" id="veT-dB-Pfn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ti-Vp-yUc">
+                                <rect key="frame" x="171" y="240" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-OX-mQy">
+                                <rect key="frame" x="185.5" y="269" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now is focus time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBP-ET-WKx">
+                                <rect key="frame" x="99.5" y="134" width="215" height="33"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8sn-D9-vls">
+                                <rect key="frame" x="106" y="332" width="202" height="4"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-ah-kGv">
+                                <rect key="frame" x="70.5" y="592" width="273" height="106"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="start_btn" title=""/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HgJ-V8-IVF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aBP-ET-WKx" firstAttribute="centerX" secondItem="veT-dB-Pfn" secondAttribute="centerX" id="336-Sn-GUJ"/>
+                            <constraint firstItem="3ti-Vp-yUc" firstAttribute="top" secondItem="aBP-ET-WKx" secondAttribute="bottom" constant="73" id="3gU-Bv-8ZA"/>
+                            <constraint firstItem="8sn-D9-vls" firstAttribute="centerX" secondItem="veT-dB-Pfn" secondAttribute="centerX" id="70e-Mc-wEn"/>
+                            <constraint firstItem="3ti-Vp-yUc" firstAttribute="centerX" secondItem="veT-dB-Pfn" secondAttribute="centerX" id="7da-aF-9H2"/>
+                            <constraint firstItem="8sn-D9-vls" firstAttribute="top" secondItem="8Mh-OX-mQy" secondAttribute="bottom" constant="42" id="Cig-Ae-LIv"/>
+                            <constraint firstItem="RiT-ah-kGv" firstAttribute="centerX" secondItem="veT-dB-Pfn" secondAttribute="centerX" id="LLF-UV-5oD"/>
+                            <constraint firstItem="8sn-D9-vls" firstAttribute="leading" secondItem="8Mh-OX-mQy" secondAttribute="trailing" constant="-122.5" id="POp-Jn-bYf"/>
+                            <constraint firstItem="aBP-ET-WKx" firstAttribute="top" secondItem="HgJ-V8-IVF" secondAttribute="top" constant="46" id="UK0-n8-9bS"/>
+                            <constraint firstItem="8Mh-OX-mQy" firstAttribute="centerX" secondItem="veT-dB-Pfn" secondAttribute="centerX" id="Xpy-1R-V4b"/>
+                            <constraint firstItem="8Mh-OX-mQy" firstAttribute="top" secondItem="3ti-Vp-yUc" secondAttribute="bottom" constant="8" symbolic="YES" id="utL-6R-UFc"/>
+                            <constraint firstItem="HgJ-V8-IVF" firstAttribute="bottom" secondItem="RiT-ah-kGv" secondAttribute="bottom" constant="164" id="wat-pV-1Hf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mbe-Bc-HuR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbH-eO-RYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988" y="129"/>
+            <point key="canvasLocation" x="1986.9565217391305" y="128.57142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nTy-Hv-NCq">
@@ -111,6 +152,7 @@
     <resources>
         <image name="custom" width="110" height="110"/>
         <image name="learning" width="110" height="110"/>
+        <image name="start_btn" width="249" height="92"/>
         <image name="working" width="110" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
