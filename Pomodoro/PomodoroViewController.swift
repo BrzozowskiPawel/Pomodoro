@@ -9,16 +9,29 @@ import UIKit
 import AVFoundation
 
 class PomodoroViewController: UIViewController {
+    @IBOutlet weak var progresBar: UIProgressView!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    var timer = Timer()
+    var timerStop = Timer()
+    var playerMusic: AVAudioPlayer!
     
     var pomodoroType: String = "NoData"
     var player: AVPlayer?
     
+    var totalTime = 0
+    var secondsPassed = 0
+    
+    let pomodoroTimes = [ "Learning": 20, "Working": 10, "Custom": 120]
+    let dateFormatter = DateFormatter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = pomodoroType
+        self.title = pomodoroType + " 🍅"
         playBackgroundVideo()
+        timeLabel.text = getTimeLeft()
     }
     
 
@@ -48,5 +61,55 @@ class PomodoroViewController: UIViewController {
     
     @objc func playerItemDidReachEnd() {
         player?.seek(to: CMTime.zero)
+    }
+    
+    @IBAction func startButton(_ sender: Any) {
+        
+        // Stops the timer from ever firing again and requests its removal from its run loop.
+        timer.invalidate()
+        
+        
+        totalTime = pomodoroTimes[pomodoroType]!
+        
+        progresBar.progress = 0.0
+        secondsPassed = 0
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        if secondsPassed < totalTime {
+            secondsPassed += 1
+            
+            let percentageProgress = Float(secondsPassed) / Float(totalTime)
+            progresBar.progress = percentageProgress
+            
+            timeLabel.text = getTimeLeft()
+            
+        }
+        else {
+            playSound(soundName: "sound_alarm")
+            timer.invalidate()
+            timerStop = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(stopMusic), userInfo: nil, repeats: false)
+        }
+    }
+    
+    @objc func stopMusic() {
+        playerMusic.stop()
+    }
+    
+    func playSound(soundName: String) {
+        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+        playerMusic = try! AVAudioPlayer(contentsOf: url!)
+        playerMusic.play()
+                
+    }
+    
+    func getTimeLeft() -> String {
+        let timeInterval = TimeInterval(pomodoroTimes[pomodoroType]! - secondsPassed)
+        let myNSDate = Date(timeIntervalSince1970: timeInterval)
+        
+        dateFormatter.dateFormat = "mm:ss"
+        return dateFormatter.string(from: myNSDate)
     }
 }

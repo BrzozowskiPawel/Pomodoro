@@ -44,16 +44,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func learningButtonPressed(_ sender: Any) {
-        pomodoroType = "Learning 🍅"
+        pomodoroType = "Learning"
         performSegue(withIdentifier: "goToPomodoro", sender: sender)
     }
     
     @IBAction func workingButtonPressed(_ sender: Any) {
-        pomodoroType = "Working 🍅"
+        pomodoroType = "Working"
         performSegue(withIdentifier: "goToPomodoro", sender: sender)
     }
     @IBAction func customButtonPressed(_ sender: Any) {
-        pomodoroType = "Custom 🍅"
+        pomodoroType = "Custom"
         performSegue(withIdentifier: "goToPomodoro", sender: sender)
     }
     

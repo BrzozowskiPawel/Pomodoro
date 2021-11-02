@@ -99,13 +99,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8sn-D9-vls">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8sn-D9-vls">
                                 <rect key="frame" x="106" y="332" width="202" height="4"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-ah-kGv">
                                 <rect key="frame" x="70.5" y="592" width="273" height="106"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="start_btn" title=""/>
+                                <connections>
+                                    <action selector="startButton:" destination="7DD-dP-JB6" eventType="touchUpInside" id="kkF-BG-p91"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HgJ-V8-IVF"/>
@@ -125,6 +128,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mbe-Bc-HuR"/>
+                    <connections>
+                        <outlet property="progresBar" destination="8sn-D9-vls" id="VxO-DW-PgF"/>
+                        <outlet property="timeLabel" destination="8Mh-OX-mQy" id="yxd-Vg-1gj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbH-eO-RYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
