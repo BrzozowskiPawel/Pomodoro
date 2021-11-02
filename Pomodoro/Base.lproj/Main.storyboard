@@ -127,7 +127,13 @@
                             <constraint firstItem="HgJ-V8-IVF" firstAttribute="bottom" secondItem="RiT-ah-kGv" secondAttribute="bottom" constant="164" id="wat-pV-1Hf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mbe-Bc-HuR"/>
+                    <navigationItem key="navigationItem" id="mbe-Bc-HuR">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="G6t-Xc-tgQ">
+                            <connections>
+                                <action selector="settingPressed:" destination="7DD-dP-JB6" id="PfO-39-156"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainLabel" destination="aBP-ET-WKx" id="ovl-zl-e9D"/>
                         <outlet property="progresBar" destination="8sn-D9-vls" id="VxO-DW-PgF"/>
@@ -159,6 +165,7 @@
     </scenes>
     <resources>
         <image name="custom" width="110" height="110"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="learning" width="110" height="110"/>
         <image name="start_btn" width="249" height="92"/>
         <image name="working" width="110" height="110"/>

@@ -24,7 +24,7 @@ class PomodoroViewController: UIViewController {
     var totalTime = 0
     var secondsPassed = 0
     
-    let pomodoroTimes = [ "Learning": 20, "Working": 10, "Custom": 120]
+    var pomodoroTimes = [ "Learning": 20, "Working": 10, "Custom": 120]
     let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {
@@ -113,6 +113,26 @@ class PomodoroViewController: UIViewController {
         
         dateFormatter.dateFormat = "mm:ss"
         return dateFormatter.string(from: myNSDate)
+    }
+    
+    @IBAction func settingPressed(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "\(pomodoroType) 🍅", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Change time", style: .default) { action in
+            
+        }
+        
+        alert.addTextField { (alerTextField) in
+            alerTextField.placeholder = "New duration [seconds]"
+//            print(alerTextField.text!)
+
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+        timeLabel.text = getTimeLeft()
     }
     
     func toggleMainLabel() {
