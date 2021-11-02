@@ -129,6 +129,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mbe-Bc-HuR"/>
                     <connections>
+                        <outlet property="mainLabel" destination="aBP-ET-WKx" id="ovl-zl-e9D"/>
                         <outlet property="progresBar" destination="8sn-D9-vls" id="VxO-DW-PgF"/>
                         <outlet property="timeLabel" destination="8Mh-OX-mQy" id="yxd-Vg-1gj"/>
                     </connections>

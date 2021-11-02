@@ -9,6 +9,8 @@ import UIKit
 import AVFoundation
 
 class PomodoroViewController: UIViewController {
+    
+    @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var progresBar: UIProgressView!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -111,5 +113,19 @@ class PomodoroViewController: UIViewController {
         
         dateFormatter.dateFormat = "mm:ss"
         return dateFormatter.string(from: myNSDate)
+    }
+    
+    func toggleMainLabel() {
+        if mainLabel.text == "Now is focus time" {
+            mainLabel.text = "You can rest :)"
+        }
+        else {
+            mainLabel.text = "Now is focus time"
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
+        timerStop.invalidate()
     }
 }
