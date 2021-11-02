@@ -45,17 +45,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on your Pomodoro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h74-c7-lIK">
+                                <rect key="frame" x="52.5" y="158" width="309.5" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qps-oh-pje" secondAttribute="bottom" constant="25" id="9kx-we-ma0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qps-oh-pje" secondAttribute="trailing" constant="6" id="X6j-9R-i43"/>
+                            <constraint firstItem="h74-c7-lIK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fHw-po-9h4"/>
+                            <constraint firstItem="h74-c7-lIK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="qEd-Ex-uky"/>
                             <constraint firstItem="qps-oh-pje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="srX-dY-Qg4"/>
                             <constraint firstItem="qps-oh-pje" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="zd9-P1-5jW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="F4F-TT-amK"/>
+                    <navigationItem key="navigationItem" id="F4F-TT-amK">
+                        <barButtonItem key="backBarButtonItem" title="BACK" id="Ozs-kN-Oye"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="7DD-dP-JB6" kind="show" identifier="goToPomodoro" id="lmF-2D-pYx"/>
                     </connections>
