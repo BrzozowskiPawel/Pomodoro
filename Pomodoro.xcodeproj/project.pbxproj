@@ -11,10 +11,10 @@
 		04129F35272C4F52006A65BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04129F34272C4F52006A65BF /* SceneDelegate.swift */; };
 		04129F37272C4F52006A65BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04129F36272C4F52006A65BF /* ViewController.swift */; };
 		04129F3A272C4F52006A65BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04129F38272C4F52006A65BF /* Main.storyboard */; };
-		04129F3D272C4F52006A65BF /* Pomodoro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04129F3B272C4F52006A65BF /* Pomodoro.xcdatamodeld */; };
 		04129F3F272C4F53006A65BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04129F3E272C4F53006A65BF /* Assets.xcassets */; };
 		04129F42272C4F53006A65BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04129F40272C4F53006A65BF /* LaunchScreen.storyboard */; };
 		04129F4A272C5A40006A65BF /* backgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04129F49272C5A40006A65BF /* backgroundVideo.mp4 */; };
+		04D191802731513500BDCB38 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1917F2731513500BDCB38 /* PomodoroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +23,11 @@
 		04129F34272C4F52006A65BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04129F36272C4F52006A65BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04129F39272C4F52006A65BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04129F3C272C4F52006A65BF /* Pomodoro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pomodoro.xcdatamodel; sourceTree = "<group>"; };
 		04129F3E272C4F53006A65BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04129F41272C4F53006A65BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04129F43272C4F53006A65BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04129F49272C5A40006A65BF /* backgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundVideo.mp4; sourceTree = "<group>"; };
+		04D1917F2731513500BDCB38 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				04129F32272C4F52006A65BF /* AppDelegate.swift */,
+				04D1917F2731513500BDCB38 /* PomodoroViewController.swift */,
 				04129F34272C4F52006A65BF /* SceneDelegate.swift */,
 				04129F36272C4F52006A65BF /* ViewController.swift */,
 				04129F38272C4F52006A65BF /* Main.storyboard */,
@@ -68,7 +69,6 @@
 				04129F40272C4F53006A65BF /* LaunchScreen.storyboard */,
 				04129F49272C5A40006A65BF /* backgroundVideo.mp4 */,
 				04129F43272C4F53006A65BF /* Info.plist */,
-				04129F3B272C4F52006A65BF /* Pomodoro.xcdatamodeld */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04129F3D272C4F52006A65BF /* Pomodoro.xcdatamodeld in Sources */,
 				04129F37272C4F52006A65BF /* ViewController.swift in Sources */,
+				04D191802731513500BDCB38 /* PomodoroViewController.swift in Sources */,
 				04129F33272C4F52006A65BF /* AppDelegate.swift in Sources */,
 				04129F35272C4F52006A65BF /* SceneDelegate.swift in Sources */,
 			);
@@ -370,19 +370,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		04129F3B272C4F52006A65BF /* Pomodoro.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				04129F3C272C4F52006A65BF /* Pomodoro.xcdatamodel */,
-			);
-			currentVersion = 04129F3C272C4F52006A65BF /* Pomodoro.xcdatamodel */;
-			path = Pomodoro.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 04129F27272C4F52006A65BF /* Project object */;
 }

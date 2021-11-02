@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uXY-Ic-bpY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -15,16 +15,94 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qps-oh-pje">
+                                <rect key="frame" x="6" y="713" width="402" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-sg-58k">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="124"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="learning" title=""/>
+                                        <connections>
+                                            <action selector="learningButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPs-pr-j6X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kR-px-rup">
+                                        <rect key="frame" x="134" y="0.0" width="134" height="124"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="working" title=""/>
+                                        <connections>
+                                            <action selector="workingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GW6-fM-Pjq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTG-ec-Prn">
+                                        <rect key="frame" x="268" y="0.0" width="134" height="124"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="custom" title=""/>
+                                        <connections>
+                                            <action selector="customButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfS-nH-cUD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qps-oh-pje" secondAttribute="bottom" constant="25" id="9kx-we-ma0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qps-oh-pje" secondAttribute="trailing" constant="6" id="X6j-9R-i43"/>
+                            <constraint firstItem="qps-oh-pje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="srX-dY-Qg4"/>
+                            <constraint firstItem="qps-oh-pje" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="zd9-P1-5jW"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F4F-TT-amK"/>
+                    <connections>
+                        <segue destination="7DD-dP-JB6" kind="show" identifier="goToPomodoro" id="lmF-2D-pYx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="129"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="128.57142857142856"/>
+        </scene>
+        <!--Pomodoro View Controller-->
+        <scene sceneID="AtJ-ZE-MuI">
+            <objects>
+                <viewController id="7DD-dP-JB6" customClass="PomodoroViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="veT-dB-Pfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HgJ-V8-IVF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mbe-Bc-HuR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YbH-eO-RYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nTy-Hv-NCq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uXY-Ic-bpY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JoC-nk-yC7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ofe-gr-GOS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cq-cA-omi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="custom" width="110" height="110"/>
+        <image name="learning" width="110" height="110"/>
+        <image name="working" width="110" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

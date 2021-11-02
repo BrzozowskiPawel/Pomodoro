@@ -9,12 +9,15 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var pomodoroType: String = ""
     var player: AVPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         playBackgroundVideo()
+        
     }
 
     func playBackgroundVideo() {
@@ -34,5 +37,25 @@ class ViewController: UIViewController {
     @objc func playerItemDidReachEnd() {
         player?.seek(to: CMTime.zero)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let definitionVC = segue.destination as! PomodoroViewController
+        definitionVC.pomodoroType = self.pomodoroType
+    }
+    
+    @IBAction func learningButtonPressed(_ sender: Any) {
+        pomodoroType = "Learning 🍅"
+        performSegue(withIdentifier: "goToPomodoro", sender: sender)
+    }
+    
+    @IBAction func workingButtonPressed(_ sender: Any) {
+        pomodoroType = "Working 🍅"
+        performSegue(withIdentifier: "goToPomodoro", sender: sender)
+    }
+    @IBAction func customButtonPressed(_ sender: Any) {
+        pomodoroType = "Custom 🍅"
+        performSegue(withIdentifier: "goToPomodoro", sender: sender)
+    }
+    
 }
 
