@@ -17,7 +17,7 @@ It uses a timer to break work into intervals, traditionally 25 minutes in length
 ## Demo
 
 
-<img src="WorldHolidays/readme_files/DEMO.gif" alt="demo_gif" width="372"/> 
+<img src="Pomodoro/readme_files/DEMO.gif" alt="demo_gif" width="372"/> 
 
 ## Description
 
@@ -43,7 +43,7 @@ Besides that users can use the gear icon to change the time for the current Pomo
 This is working with the help of alert. </br>
 After the time is up alarm is playing and the label changes: </br>
 
-<img src="WorldHolidays/readme_files/TIMESUP.gif" alt="demo_gif" width="372"/> 
+<img src="Pomodoro/readme_files/TIMESUP.gif" alt="demo_gif" width="372"/> 
 
 ## Room for improvements
 
