@@ -24,7 +24,7 @@ class PomodoroViewController: UIViewController {
     var totalTime = 0
     var secondsPassed = 0
     
-    var pomodoroTimes = [ "Learning": 20, "Working": 10, "Custom": 120]
+    var pomodoroTimes = [ "Learning": 1200, "Working": 1500, "Custom": 1800]
     let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {
