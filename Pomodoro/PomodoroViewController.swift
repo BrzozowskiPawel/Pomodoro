@@ -27,6 +27,8 @@ class PomodoroViewController: UIViewController {
     var pomodoroTimes = [ "Learning": 1200, "Working": 1500, "Custom": 1800]
     let dateFormatter = DateFormatter()
 
+    var musicIsPlaying = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,6 +93,7 @@ class PomodoroViewController: UIViewController {
             
         }
         else {
+            musicIsPlaying = true
             playSound(soundName: "sound_alarm")
             timer.invalidate()
             timerStop = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(stopMusic), userInfo: nil, repeats: false)
@@ -100,6 +103,7 @@ class PomodoroViewController: UIViewController {
     @objc func stopMusic() {
         playerMusic.stop()
         toggleMainLabel()
+        musicIsPlaying = false
     }
     
     func playSound(soundName: String) {
@@ -151,6 +155,8 @@ class PomodoroViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         timer.invalidate()
         timerStop.invalidate()
-        stopMusic()
+        if musicIsPlaying{
+            stopMusic()
+        }
     }
 }
