@@ -29,7 +29,8 @@ class PomodoroViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
         self.title = pomodoroType + " 🍅"
         playBackgroundVideo()
@@ -130,6 +131,8 @@ class PomodoroViewController: UIViewController {
             if let newTime = alert.textFields?.first?.text {
                 print("Time: \(newTime)")
                 self.pomodoroTimes[self.pomodoroType]! = Int(newTime)!
+                
+                
                 self.timeLabel.text = self.getTimeLeft()
             }
         }))
@@ -148,5 +151,6 @@ class PomodoroViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         timer.invalidate()
         timerStop.invalidate()
+        stopMusic()
     }
 }
